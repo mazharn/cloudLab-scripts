@@ -50,6 +50,7 @@ update-grub
 
 # Download Mellanox OFED package
 if [ ! -z "$MLNX_OFED" ]; then
+    cd /local/scripts/
     axel -n 8 -q http://content.mellanox.com/ofed/MLNX_OFED-4.1-1.0.2.0/$MLNX_OFED.tgz
     tar xzf $MLNX_OFED.tgz
 fi
