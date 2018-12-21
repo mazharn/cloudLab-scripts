@@ -34,7 +34,7 @@ echo ssh > /etc/pdsh/rcmd_default
 # Enable hugepage support: http://dpdk.org/doc/guides/linux_gsg/sys_reqs.html
 # The changes will take effects after reboot.
 # Reserve 1GB hugepages via kernel boot parameters
-kernel_boot_params="hugepages=1024"
+kernel_boot_params="default_hugepagesz=2M hugepagesz=2M hugepages=1024"
 
 # Disable intel_idle driver to gain control over C-states (this driver will
 # most ignore any other BIOS setting and kernel parameters). Then limit
